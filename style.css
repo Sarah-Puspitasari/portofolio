@@ -398,3 +398,66 @@ footer{
   }
 
 }
+
+/* PROJECT CARD IMAGE FIX */
+
+.project-card img{
+  display:block;
+}
+
+
+/* ACTIVITY IMAGE */
+
+.activity-img{
+  background:#ddd;
+}
+
+
+/* SMOOTH ANIMATION */
+
+.card,
+.skill-box,
+.project-card,
+.gallery-item,
+.activity{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* HOVER EFFECT */
+
+.gallery-item img,
+.project-card img{
+  transition:0.4s;
+}
+
+.gallery-item:hover img,
+.project-card:hover img{
+  transform:scale(1.05);
+}
+
+
+/* MOBILE FIX */
+
+@media(max-width:768px){
+
+  .project-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .project-card img{
+    height:220px;
+  }
+
+}
