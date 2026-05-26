@@ -1,12 +1,15 @@
-
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family: 'Arial', sans-serif;
+  font-family:'Arial', sans-serif;
   background:#f7f4f0;
   color:#1f2a44;
   line-height:1.7;
@@ -18,16 +21,23 @@ body{
   margin:auto;
 }
 
+
+/* HERO */
+
 .hero{
   height:100vh;
-  background:linear-gradient(rgba(20,20,20,0.45), rgba(20,20,20,0.45)),
+  background:
+  linear-gradient(rgba(20,20,20,0.45), rgba(20,20,20,0.45)),
   url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop');
+
   background-size:cover;
   background-position:center;
+
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
+
   color:white;
 }
 
@@ -49,6 +59,7 @@ body{
 .description{
   margin-top:20px;
   font-size:18px;
+  line-height:1.8;
 }
 
 .btn{
@@ -64,8 +75,11 @@ body{
 }
 
 .btn:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
+
+
+/* GENERAL SECTION */
 
 section{
   padding:90px 0;
@@ -77,12 +91,19 @@ h2{
   font-size:40px;
 }
 
+
+/* ABOUT */
+
 .about p{
   text-align:center;
   max-width:800px;
   margin:auto;
   font-size:18px;
+  line-height:1.9;
 }
+
+
+/* EXPERIENCE & CERTIFICATE CARD */
 
 .card{
   background:white;
@@ -94,7 +115,7 @@ h2{
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
 }
 
 .card h3{
@@ -105,6 +126,14 @@ h2{
   color:#999;
   font-size:14px;
 }
+
+.card p{
+  margin-top:10px;
+  color:#555;
+}
+
+
+/* SKILLS */
 
 .skill-grid{
   display:grid;
@@ -119,33 +148,15 @@ h2{
   text-align:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
   font-weight:bold;
+  transition:0.3s;
 }
 
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+.skill-box:hover{
+  transform:translateY(-5px);
 }
 
-.gallery-item{
-  height:220px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#d8c3a5,#1f2a44);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  font-size:20px;
-  font-weight:bold;
-  text-align:center;
-  padding:20px;
-}
 
-.gallery-note{
-  margin-top:25px;
-  text-align:center;
-  color:#666;
-}
+/* CAMPUS ACTIVITIES */
 
 .activity{
   display:flex;
@@ -156,6 +167,11 @@ h2{
   border-radius:25px;
   margin-bottom:40px;
   box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.activity:hover{
+  transform:translateY(-6px);
 }
 
 .activity-img{
@@ -173,22 +189,62 @@ h2{
 .activity-text p{
   margin-bottom:15px;
   line-height:1.8;
+  color:#555;
 }
 
 .activity-text ul{
   padding-left:20px;
   line-height:1.8;
+  color:#444;
 }
 
-@media(max-width:900px){
 
-.activity{
-  flex-direction:column;
+/* GALLERY */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
-.activity-img{
+.gallery-item{
+  height:220px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#d8c3a5,#1f2a44);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  text-align:center;
+
+  padding:20px;
+
+  transition:0.4s;
+  overflow:hidden;
+}
+
+.gallery-item:hover{
+  transform:scale(1.03);
+}
+
+.gallery-item img{
   width:100%;
+  height:100%;
+  object-fit:cover;
 }
+
+.gallery-note{
+  margin-top:25px;
+  text-align:center;
+  color:#666;
+}
+
+
+/* CONTACT */
 
 .contact{
   background:#1f2a44;
@@ -196,13 +252,29 @@ h2{
 }
 
 .contact-box{
-  max-width:500px;
+  max-width:600px;
   margin:auto;
   background:rgba(255,255,255,0.08);
-  padding:30px;
-  border-radius:20px;
+  padding:40px;
+  border-radius:25px;
   text-align:center;
+  line-height:2.4;
+  backdrop-filter:blur(10px);
 }
+
+.contact-box a{
+  color:#f0d7bd;
+  text-decoration:none;
+  transition:0.3s;
+  font-weight:bold;
+}
+
+.contact-box a:hover{
+  color:white;
+}
+
+
+/* FOOTER */
 
 footer{
   background:#162033;
@@ -211,22 +283,48 @@ footer{
   padding:20px;
 }
 
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .activity{
+    flex-direction:column;
+  }
+
+  .activity-img{
+    width:100%;
+  }
+
+}
+
+
 @media(max-width:768px){
 
-.hero h1{
-  font-size:42px;
-}
+  .hero h1{
+    font-size:42px;
+  }
 
-.subtitle{
-  font-size:18px;
-}
+  .subtitle{
+    font-size:18px;
+  }
 
-.description{
-  font-size:16px;
-}
+  .description{
+    font-size:16px;
+  }
 
-h2{
-  font-size:32px;
-}
+  h2{
+    font-size:32px;
+  }
+
+  .activity{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .activity-img{
+    width:100%;
+    height:auto;
+  }
 
 }
