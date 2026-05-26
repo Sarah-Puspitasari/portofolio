@@ -289,20 +289,6 @@ h2{
   color:#f0d7bd;
 }
 
-@media(max-width:768px){
-
-  .contact-item{
-    grid-template-columns:1fr;
-    gap:5px;
-    text-align:center;
-  }
-
-  .colon{
-    display:none;
-  }
-
-}
-
 
 /* FOOTER */
 
