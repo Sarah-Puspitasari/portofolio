@@ -78,6 +78,14 @@ body{
   transform:translateY(-4px);
 }
 
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;   /* bikin bulat */
+  object-fit: cover;    /* biar proporsional */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 
 /* GENERAL SECTION */
 
