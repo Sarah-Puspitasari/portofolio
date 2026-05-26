@@ -147,6 +147,49 @@ h2{
   color:#666;
 }
 
+.activity{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  margin-bottom:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.activity-img{
+  width:320px;
+  height:240px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.activity-text h3{
+  margin-bottom:15px;
+  font-size:28px;
+}
+
+.activity-text p{
+  margin-bottom:15px;
+  line-height:1.8;
+}
+
+.activity-text ul{
+  padding-left:20px;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+
+.activity{
+  flex-direction:column;
+}
+
+.activity-img{
+  width:100%;
+}
+
 .contact{
   background:#1f2a44;
   color:white;
