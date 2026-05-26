@@ -343,4 +343,14 @@ footer{
     height:auto;
   }
 
+  .contact-item{
+    grid-template-columns:1fr;
+    gap:5px;
+    text-align:center;
+  }
+
+  .colon{
+    display:none;
+  }
+
 }
